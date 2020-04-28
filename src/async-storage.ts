@@ -1,6 +1,4 @@
-
-const dbName = 'Shopee-Seller-Center';
-const storeName = 'local_storage';
+const storeName = 'storage';
 const indexName = 'key';
 
 type ResolveCallback = (...args: any[]) => void;
@@ -22,12 +20,12 @@ export class AsyncStorage {
 
   error: any;
 
-  constructor() {
+  constructor(private storageName: string) {
     this.init();
   }
 
   private init() {
-    const request = indexedDB.open(dbName);
+    const request = indexedDB.open(this.storageName);
     request.onsuccess = () => {
       this.db = request.result;
       this.ready();
