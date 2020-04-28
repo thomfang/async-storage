@@ -3,14 +3,14 @@ An asynchronous storage based on indexedDB for web browser.
 
 ## Usage
 
-### new(storageName: string)
+### `new(storageName: string)`
 
 ```ts
 const storage = new AsyncStorage('storageName');
 
 ```
 
-### set<T>(key: string, value: T): Promise<void>
+### `set<T>(key: string, value: T): Promise<void>`
 
 ```ts
 async function setData() {
@@ -23,7 +23,7 @@ async function setData() {
 }
 ```
 
-### get<T>(key: string): Promise<T>
+### `get<T>(key: string): Promise<T>`
 
 ```ts
 async function getData() {
@@ -34,7 +34,7 @@ async function getData() {
 }
 ```
 
-### remove(key: string): Promise<void>
+### `remove(key: string): Promise<void>`
 
 ```ts
 async function removeData() {
@@ -42,7 +42,7 @@ async function removeData() {
 }
 ```
 
-### clear(): Promise<void>
+### `clear(): Promise<void>`
   
 ```ts
 async function clearData() {
