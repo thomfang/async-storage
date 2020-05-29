@@ -18,8 +18,8 @@ export class Storage extends EventEmitter {
   };
 
   private db!: IStorage;
-  private supportedIDB = false//window.indexedDB !== null && typeof window.indexedDB.open === 'function';
-  private detectKeysInterval = 1000// * 10; // 10s
+  private supportedIDB = window.indexedDB !== null && typeof window.indexedDB.open === 'function';
+  private detectKeysInterval = 1000 * 10; // 10s
   private timerId!: any;
 
   public readonly limit!: number;
